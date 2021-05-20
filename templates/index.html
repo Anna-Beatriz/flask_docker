@@ -1,0 +1,54 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="text-center">Comentar</h1>
+                        <form action="/" method="POST" id="form-contato">
+                            <div class="form-group">
+                                <label for="nome">Nome:</label>
+                                <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome...">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="email">E-mail:</label>
+                                <input class="form-control" type="email" name="email" id="email" placeholder="seu@email.com.br">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="comentario">Comentário:</label>
+                                <textarea class="form-control" name="comentario" id="comentario" placeholder="Digite o comentário..."></textarea>
+                            </div>
+                            <br>
+                            <div class="form-group text-center">
+                                <button type="button" class="btn btn-outline-dark btn-lg">ENVIAR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card" id="card2">
+                    {% for comentario in comentarios %}
+                        <div class="card-body">
+                            <div class="well">
+                                <strong>Nome:</strong>
+                                {{comentario.nome}}
+                                <br>
+                                <strong>Email:</strong>
+                                {{comentario.email}}
+                                <br>
+                                <strong>Comentário:</strong>
+                                {{comentario.comentario}}
+                                <br>
+                                <em>{{comentario.data_com.strftime('%d-%m-%Y')}}</em>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
