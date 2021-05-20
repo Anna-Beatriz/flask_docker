@@ -1,1 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
 
+body {
+    padding-top: 80px;
+    background: #1C1C1C;
+  }
+  
+.card {
+    box-shadow: 4px 8px 10px 4px rgba(245, 12, 12, 0.3);
+    font-family: 'Zilla Slab', serif;
+  }
+
+label {
+    color: #ED394E;
+}
+  
+textarea.form-control {
+    height: 90px;
+    resize: none;
+  }
+
+#card2 {
+    margin-top: 30px;
+}
