@@ -14,7 +14,7 @@ acessar o programa no navegador e inserir dados
 
 docker ps
 
-docker exec -it <id container do db> /bin/bash
+docker exec -it (id container do db) /bin/bash
 
 su postgres
   
